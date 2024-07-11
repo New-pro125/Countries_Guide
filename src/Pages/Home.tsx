@@ -1,9 +1,10 @@
 import NavBar from "../Components/NavBar";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Countries } from "../data";
 import CountryCard from "../Components/CountryCard";
 import HeaderMain from "../Components/HeaderMain";
 import NotFound from "../Components/NotFound";
+import { Link } from "react-router-dom";
 const Home = () => {
 	const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 	const [country, setCountry] = useState<string>("");
@@ -20,7 +21,7 @@ const Home = () => {
 	const Cards = countriesBytag.map(
 		(item, idx) =>
 			item && (
-				<Fragment key={idx}>
+				<Link key={idx} to={`/countries/${item.alpha3Code}`}>
 					<CountryCard
 						name={item.name}
 						population={item.population}
@@ -31,7 +32,7 @@ const Home = () => {
 							isDarkMode && "bg-slate-600 shadow-slate-700 border-none"
 						}`}
 					/>{" "}
-				</Fragment>
+				</Link>
 			)
 	);
 	return (
