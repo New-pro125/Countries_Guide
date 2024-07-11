@@ -5,8 +5,11 @@ import CountryCard from "../Components/CountryCard";
 import HeaderMain from "../Components/HeaderMain";
 import NotFound from "../Components/NotFound";
 import { Link } from "react-router-dom";
-const Home = () => {
-	const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+interface Iprops {
+	isDarkMode:boolean;
+	setIsDarkMode:(arg:boolean)=>void;
+}
+const Home = ({isDarkMode,setIsDarkMode}:Iprops) => {
 	const [country, setCountry] = useState<string>("");
 	const [selectedTag, setSelectedTag] = useState<string>("");
 	//* render
