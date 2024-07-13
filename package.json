@@ -1,12 +1,12 @@
 {
-  "homepage": "http://New-pro125.github.io/rest-countries-api-with-color-theme-switcher-master",
-  "name": "rest-countries-api-with-color-theme-switcher-master",
+  "homepage": "http://New-pro125.github.io/Countries_Guide",
+  "name": "Countries_Guide",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "deploy":"gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
