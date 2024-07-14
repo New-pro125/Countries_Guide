@@ -10,7 +10,7 @@ const Country = ({ isDarkMode, setIsDarkMode }: Iprops) => {
 		<div
 			className={`${
 				isDarkMode ? "bg-slate-700 text-white" : "bg-white"
-			}min-h-screen`}>
+			} h-screen`}>
 			<NavBar isDarkMode={isDarkMode} setDarkMode={setIsDarkMode} />
 			<Header isDarkMode={isDarkMode}  />
 			<CountryDetail isDarkMode={isDarkMode}  />
